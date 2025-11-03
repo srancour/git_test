@@ -43,3 +43,17 @@ const actual = max - 13;
 const percentage = actual / max;
 
 console.log(percentage);
+
+let admin = name;
+
+alert( admin );
+
+let ourPlanetName = "Earth";
+
+let currentUserName = name + " " + surname;
+
+console.log(currentUserName);
+
+const BIRTHDAY = '18.04.1982';
+
+// const userAge = somecode(BIRTHDAY);
