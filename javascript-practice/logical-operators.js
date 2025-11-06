@@ -1,3 +1,5 @@
+// Start Logical operators lesson
+
 // alert( true || true);
 // alert( false || true);
 // alert( true || false);
@@ -88,18 +90,125 @@
 //     alert( "you are not old enough" );
 // }
 
-let userName = prompt("Who's there?", "");
-if (userName === "Admin") {
-    let password = prompt("Password?", "");
-    if (password === "TheMaster") {
-        alert("Welcome!");
-    } else if (password === "" || password === null) {
-        alert("Canceled");
-    } else {
-        alert("Wrong password");
-    }
-} else if (userName === "" || userName === null) {
-    alert("Cancelled");
+// let userName = prompt("Who's there?", "");
+// if (userName === "Admin") {
+//     let password = prompt("Password?", "");
+//     if (password === "TheMaster") {
+//         alert("Welcome!");
+//     } else if (password === "" || password === null) {
+//         alert("Canceled");
+//     } else {
+//         alert("Wrong password");
+//     }
+// } else if (userName === "" || userName === null) {
+//     alert("Cancelled");
+// } else {
+//     alert("I don't know you");
+// }
+
+// End Logical operators lesson
+
+// Start Making decisions in your code - conditionals
+
+// const select = document.querySelector("select");
+// const para = document.querySelector("p");
+
+// select.addEventListener("change", setWeather);
+
+// function setWeather() {
+//     const choice = select.value;
+
+//     // Start switch option
+//     switch (choice) {
+//         case "sunny":
+//             para.textContent = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+//             break;
+//         case "rainy":
+//             para.textContent = "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+//             break;
+//         case "snowing":
+//             para.textContent = "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+//             break;
+//         case "overcast":
+//             para.textContent = "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+//             break;
+//         default:
+//             para.textContent = "";
+//     }
+//     // End switch option
+
+    // Start else if option
+    // if (choice === "sunny") {
+    //     para.textContent = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+    // } else if (choice === "rainy") {
+    //     para.textContent = "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+    // } else if (choice === "snowing") {
+    //     para.textContent = "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+    // } else if (choice === "overcast") {
+    //     para.textContent = "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+    // } else {
+    //     para.textContent = "";
+    // }
+    // End else if option
+
+// }
+
+let cheese = "Cheddar";
+
+if (cheese) {
+    console.log("Yay! Cheese available for making cheese on toast.");
 } else {
-    alert("I don't know you");
+    console.log("No cheese on toast for you today.");
 }
+
+let shoppingDone = false;
+let childAllowance;
+
+if (shoppingDone) {
+    childAllowance = 10;
+} else {
+    childAllowance = 5;
+}
+
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+document.body.style.padding = "10px";
+
+function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+}
+
+
+select.addEventListener("change", () => {
+// Start ternary option
+//     select.value === "black"
+//         ? update("black", "white")
+//         : update("white", "black"),
+// End ternary option
+
+// Start switch option
+const choice = select.value;
+
+switch(choice) {
+    case "white":
+        update("white", "black");
+        break;
+    case "black":
+        update("black", "white");
+        break;
+    case "purple":
+        update("purple", "white");
+        break;
+    case "yellow":
+        update("yellow", "black");
+        break;
+    case "psychedelic":
+        update("lime", "purple")
+        break;
+}
+// End switch option
+});
+
+
+// End Making decisions in your code - conditionals
