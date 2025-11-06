@@ -210,5 +210,56 @@ switch(choice) {
 // End switch option
 });
 
-
 // End Making decisions in your code - conditionals
+
+// Start Conditional branching: if, '?'
+
+// The name of JavaScript
+// let jsName = prompt(`What is the "official" name of JavaScript?`, "");
+
+// if (jsName === "ECMAScript") {
+//     alert("Right!");
+// } else {
+//     alert(`You don't know? "ECMAScript"!`);
+// }
+
+// Show the sign
+let number = prompt(`What is your number?`, ``);
+
+if (number > 0) {
+    alert(1);
+} else if (number < 0) {
+    alert (-1);
+} else if (number == 0) {
+    alert(0);
+}
+
+// Rewrite 'if' into '?'
+// let result;
+
+// if (a + b < 4) {
+//     result = 'Below';
+// } else {
+//     result = 'Over'
+// }
+// let result = (a + b < 4) ? 'Below' :
+// 'Over';
+
+// Rewrite 'if...else' into '?'
+// let message;
+
+// if (login == 'Employee') {
+//   message = 'Hello';
+// } else if (login == 'Director') {
+//   message = 'Greetings';
+// } else if (login == '') {
+//   message = 'No login';
+// } else {
+//   message = '';
+// }
+// let message = (login == 'Employee') ? 'Hello' :
+//             (login == 'Director') ? 'Greetings' :
+//             (login == '') ? 'No login' :
+//             '';
+
+// End Conditional branching: if, '?'
