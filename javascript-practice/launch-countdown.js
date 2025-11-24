@@ -1,8 +1,7 @@
 const output = document.querySelector(".output");
 output.textContent = "";
 
-// let i = 10;
-for (let i = 10, i <= 0, i--) {
+for (let i = 10; i >= 0; i--) {
     const para = document.createElement('p');
     output.appendChild(para);
     if (i === 10) {
