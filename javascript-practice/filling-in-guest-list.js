@@ -23,6 +23,9 @@ const people = [
         admitted.textContent += `${person}, `;
     }
   }
+
+  refused.textContent = `${refused.textContent.slice(0, -2)}.`; // Slice to final comma and space and replace with a period
+  admitted.textContent = `${admitted.textContent.slice(0, -2)}.`; // Slice to final comma and space and replace with a period
   // refused.textContent += ...;
   // admitted.textContent += ...;
   
