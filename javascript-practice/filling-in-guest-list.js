@@ -16,7 +16,13 @@ const people = [
   refused.textContent = "Refuse: ";
   
   // loop starts here
-  
+  for (const person of people) {
+    if (person === "Phil" || person === "Lola") {
+        refused.textContent += `${person}, `;
+    } else {
+        admitted.textContent += `${person}, `;
+    }
+  }
   // refused.textContent += ...;
   // admitted.textContent += ...;
   
