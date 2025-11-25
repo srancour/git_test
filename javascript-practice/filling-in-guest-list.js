@@ -17,11 +17,11 @@ refused.textContent = "Refuse: ";
 
 // loop starts here
 for (const person of people) {
-if (person === "Phil" || person === "Lola") {
+    if (person === "Phil" || person === "Lola") {
     refused.textContent += `${person}, `;
-} else {
+    } else {
     admitted.textContent += `${person}, `;
-}
+    }
 }
 
 refused.textContent = `${refused.textContent.slice(0, -2)}.`; // Slice to final comma and space and replace with a period
