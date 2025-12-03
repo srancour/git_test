@@ -26,3 +26,39 @@ secondParagraph.textContent = "ME TOO!"
 newDiv.appendChild(secondParagraph);
 
 container.appendChild(newDiv);
+
+// Method Two
+const btn2 = document.querySelector("#btn2");
+btn2.onclick = () => alert("Hello World");
+
+// Method Three
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", () => {
+    alert("Hello World");
+})
+
+// Function Method One, Two, and Three
+function alertFunction() {
+    alert("YAY! YOU DID IT!");
+}
+// End Function Method One
+
+// Function Method Two
+const fBtn2 = document.querySelector("#fBtn2");
+fBtn2.onclick = alertFunction;
+
+// Function Method Three
+const fBtn3 = document.querySelector("#fBtn3");
+// fBtn3.addEventListener("click", alertFunction);
+fBtn3.addEventListener("click", function(e){
+    console.log(e.target);
+    e.target.style.background = "blue";
+});
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    })
+})
