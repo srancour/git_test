@@ -23,6 +23,10 @@
         );
         const linkPara = document.querySelector("p");
         linkPara.appendChild(text);
+        sect.appendChild(linkPara);
+        // sect.removeChild(linkPara); // remove based on parent name
+        // linkPara.remove(); // remove based on self (not supported in older browsers)
+        linkPara.parentNode.removeChild(linkPara); // remove based on selecting self's parent and then self (supported in older browsers)
       </script>
   </body>
 </html>
