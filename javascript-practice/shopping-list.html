@@ -31,7 +31,34 @@
     </ul>
 
     <script>
+      const list = document.querySelector("ul");
+      const textField = document.querySelector("input");
+      const addButton = document.querySelector("button");
+      
+      addButton.addEventListener("click", (event) => {
+        event.preventDefault(); // prevent page from reloading
 
+        const item = textField.value; // grab value and reset
+        textField.value = "";
+
+        const newListItem = document.createElement("li");
+        const newListItemText = document.createElement("span");
+        const newListItemButton = document.createElement("button");
+        
+        newListItem.appendChild(newListItemText); // add the span to the li
+        newListItemText.textContent = item;
+
+        newListItem.appendChild(newListItemButton); // add the button to the li
+        newListItemButton.textContent = "Delete";
+
+        list.appendChild(newListItem); // add the new entire row to the list
+
+        newListItemButton.addEventListener("click", () => {
+          list.removeChild(newListItem); // remove the li from the group the button is in
+        });
+
+        textField.focus(); // reset focus back on text field
+      });
     </script>
   </body>
 </html>
